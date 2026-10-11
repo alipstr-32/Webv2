@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation & FAQ - ALIP ENCRYPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🛡️ ALIP <span>ENCRYPTOR</span></a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="encrypt.html">Encrypt File</a></li>
+                <li><a href="decrypt.html">Decrypt File</a></li>
+                <li><a href="obfuscator.html">Obfuscator</a></li>
+                <li><a href="batch.html">Batch Processor</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="documentation.html" class="active">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Dokumentasi & Pertanyaan Umum (FAQ)</h2>
+            
+            <h3 style="margin-top: 1.5rem; color: var(--accent-cyan);">1. Apakah data saya aman?</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6;">
+                Ya. Semua enkripsi dan dekripsi menggunakan Web Crypto API standar industri (AES-256-GCM) yang berjalan langsung di browser Anda. File tidak pernah dikirim ke server luar.
+            </p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--accent-cyan);">2. Apa itu format .alipenc?</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6;">
+                Format kontainer khusus yang menyimpan metadata file asli (nama dan ekstensi) serta ciphertext terenkripsi bersama salt dan IV acak kriptografis.
+            </p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--accent-cyan);">3. Apa perbedaan Enkripsi dan Obfuscation?</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6;">
+                <strong>Enkripsi</strong> melindungi kerahasiaan data total dengan kunci kriptografi. <strong>Obfuscation</strong> mengaburkan keterbacaan kode sumber tanpa mengubah fungsionalitas aslinya, bukan enkripsi mutlak.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ALIP ENCRYPTOR Public Edition.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Obfuscator - ALIP ENCRYPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🛡️ ALIP <span>ENCRYPTOR</span></a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="encrypt.html">Encrypt File</a></li>
+                <li><a href="decrypt.html">Decrypt File</a></li>
+                <li><a href="obfuscator.html" class="active">Obfuscator</a></li>
+                <li><a href="batch.html">Batch Processor</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="documentation.html">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Source Code Obfuscator</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Lindungi kode JavaScript, HTML, CSS, dan skrip lainnya agar sulit dibaca oleh pihak lain.</p>
+
+            <div class="dropzone" id="dropzoneObf">
+                <p>Unggah file kode sumber atau tempel kode di bawah</p>
+                <input type="file" id="fileInputObf" style="display: none;" accept=".js,.html,.css,.json,.py,.php">
+            </div>
+
+            <div class="form-group">
+                <label for="languageSelect">Bahasa Pemrograman / Format</label>
+                <select id="languageSelect" class="form-control">
+                    <option value="js">JavaScript (.js)</option>
+                    <option value="html">HTML (.html)</option>
+                    <option value="css">CSS (.css)</option>
+                    <option value="json">JSON (.json)</option>
+                    <option value="text">Teks / Umum (Minifikasi)</option>
+                </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Kode Asli</label>
+                    <textarea id="codeSource" class="form-control" rows="10" placeholder="// Tempel kode di sini atau unggah file..."></textarea>
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Hasil Obfuscation / Minifikasi</label>
+                    <textarea id="codeResult" class="form-control" rows="10" placeholder="// Hasil akan muncul di sini..." readonly></textarea>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button id="btnObfuscate" class="btn btn-primary">START OBFUSCATOR</button>
+                <button id="btnCopyCode" class="btn btn-secondary">COPY CODE</button>
+                <button id="btnDownloadObf" class="btn btn-secondary" disabled>DOWNLOAD OBFUSCATED FILE</button>
+                <button id="btnResetObf" class="btn btn-secondary">RESET</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ALIP ENCRYPTOR Public Edition.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/file-handler.js"></script>
+    <script src="js/download.js"></script>
+    <script src="js/obfuscator.js"></script>
+</body>
+</html>

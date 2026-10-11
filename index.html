@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIP ENCRYPTOR - Public Security & Encryption Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                🛡️ ALIP <span>ENCRYPTOR</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="encrypt.html">Encrypt File</a></li>
+                <li><a href="decrypt.html">Decrypt File</a></li>
+                <li><a href="obfuscator.html">Obfuscator</a></li>
+                <li><a href="batch.html">Batch Processor</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="documentation.html">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Platform Keamanan & Enkripsi File Universal</h1>
+            <p>Lindungi file rahasia Anda, dekripsi kontainer .alipenc, dan amankan kode sumber Anda langsung di browser dengan standar kriptografi tingkat lanjut tanpa perlu Termux atau instalasi server.</p>
+            <div class="cta-group">
+                <a href="encrypt.html" class="btn btn-primary">Start Encrypt</a>
+                <a href="decrypt.html" class="btn btn-secondary">Start Decrypt</a>
+                <a href="obfuscator.html" class="btn btn-secondary">Code Obfuscator</a>
+            </div>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="statProcessed">0</h3>
+                <p>File Diproses Sesi Ini</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="statSuccess">0</h3>
+                <p>Proses Berhasil</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="statFailed">0</h3>
+                <p>Proses Gagal</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="statSize">0 KB</h3>
+                <p>Total Data Diproses</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Tentang ALIP ENCRYPTOR</h2>
+            <p style="color: var(--text-muted); margin-top: 0.75rem; line-height: 1.6;">
+                ALIP ENCRYPTOR dirancang untuk memberikan privasi maksimal kepada pengguna melalui Web Crypto API (AES-256-GCM). Seluruh proses enkripsi dan dekripsi dilakukan secara lokal di perangkat Anda, memastikan tidak ada kunci atau konten file yang bocor ke server publik.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ALIP ENCRYPTOR Public Edition. Secured Client-Side Processing.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

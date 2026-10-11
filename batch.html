@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Processor - ALIP ENCRYPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🛡️ ALIP <span>ENCRYPTOR</span></a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="encrypt.html">Encrypt File</a></li>
+                <li><a href="decrypt.html">Decrypt File</a></li>
+                <li><a href="obfuscator.html">Obfuscator</a></li>
+                <li><a href="batch.html" class="active">Batch Processor</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="documentation.html">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Batch File Processor</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Proses banyak file sekaligus secara otomatis dan unduh hasilnya dalam format arsip ZIP.</p>
+
+            <div class="form-group">
+                <label for="batchMode">Pilih Mode Operasi</label>
+                <select id="batchMode" class="form-control">
+                    <option value="encrypt">Enkripsi Massal (.alipenc)</option>
+                    <option value="decrypt">Dekripsi Massal</option>
+                </select>
+            </div>
+
+            <div class="dropzone" id="dropzoneBatch">
+                <p>Seret banyak file ke sini atau <span style="color: var(--accent-cyan); font-weight: 600;">Pilih Banyak File</span></p>
+                <input type="file" id="fileInputBatch" style="display: none;" multiple>
+            </div>
+
+            <div id="batchFileList" style="margin-bottom: 1.5rem;"></div>
+
+            <div class="form-group">
+                <label for="batchPassword">Password</label>
+                <input type="password" id="batchPassword" class="form-control" placeholder="Masukkan password batch">
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button id="btnStartBatch" class="btn btn-primary">START BATCH PROCESS</button>
+                <button id="btnDownloadZip" class="btn btn-secondary" disabled>DOWNLOAD ALL (ZIP)</button>
+            </div>
+
+            <div id="batchReport" style="margin-top: 1.5rem;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ALIP ENCRYPTOR Public Edition.</p>
+    </footer>
+
+    <!-- Include JSZip for Batch Archive generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/file-handler.js"></script>
+    <script src="js/download.js"></script>
+    <script src="js/batch.js"></script>
+</body>
+</html>
