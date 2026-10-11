@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrypt File - ALIP ENCRYPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🛡️ ALIP <span>ENCRYPTOR</span></a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="encrypt.html">Encrypt File</a></li>
+                <li><a href="decrypt.html" class="active">Decrypt File</a></li>
+                <li><a href="obfuscator.html">Obfuscator</a></li>
+                <li><a href="batch.html">Batch Processor</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="documentation.html">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Decrypt File (.alipenc)</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Pulihkan file asli dari kontainer terenkripsi `.alipenc` dengan password yang benar.</p>
+
+            <!-- DIPERBAIKI: Menggunakan <label> untuk pembukaan file native Android -->
+            <label for="fileInputDecrypt" class="dropzone" id="dropzoneDecrypt" style="display: block; cursor: pointer; text-align: center;">
+                <p>Seret file ke sini atau <span style="color: var(--accent-cyan); font-weight: 600;">Ketuk untuk Pilih File .alipenc</span></p>
+                <input type="file" id="fileInputDecrypt" style="display: none;" accept=".alipenc">
+            </label>
+
+            <div id="fileInfoDecrypt" style="margin-bottom: 1.5rem;"></div>
+
+            <div class="form-group">
+                <label for="decryptPassword">Password Dekripsi</label>
+                <input type="password" id="decryptPassword" class="form-control" placeholder="Masukkan password file">
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button id="btnDecrypt" class="btn btn-primary">START DECRYPT</button>
+                <button id="btnResetDecrypt" class="btn btn-secondary">RESET</button>
+            </div>
+
+            <div id="decryptResult" style="margin-top: 2rem;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ALIP ENCRYPTOR Public Edition.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/file-handler.js"></script>
+    <script src="js/download.js"></script>
+    <script src="js/decrypt.js"></script>
+</body>
+</html>
